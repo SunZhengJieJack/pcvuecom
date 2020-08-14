@@ -18,7 +18,8 @@ export default {
         columns: [
           {
             name: "name",
-            label:'名字'
+            label:'名字',
+            // width:100
           },
           {
             name: "age",
@@ -46,14 +47,7 @@ export default {
                   },
                   on: {
                     click: function () {
-                      self.$Modal.confirm({
-                        title: "提示",
-                        content: "<p>请确认是否删除该产品</p>",
-                        onOk: () => {
-                          self.gotoDelete(param.row);
-                        },
-                        onCancel: () => {},
-                      });
+                      
                     },
                   },
                 },
