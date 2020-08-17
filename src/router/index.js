@@ -13,9 +13,25 @@ const routes = [
         path: 'table',
         name: 'table',
         meta: {
-
+          title:'表格'
         },
         component: () => import('@/views/table.vue'),
+      },
+      {
+        path: 'model',
+        name: 'model',
+        meta: {
+          title:'弹窗'
+        },
+        component: () => import('@/views/model.vue'),
+      },
+      {
+        path: 'demo',
+        name: 'demo',
+        meta: {
+          title:'demo'
+        },
+        component: () => import('@/views/demo'),
       },
     ]
   },

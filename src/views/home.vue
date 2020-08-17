@@ -1,10 +1,10 @@
 <template>
   <div class="home">
     <el-row :gutter="24" class="min-hgt">
-      <el-col :span="4">
+      <el-col :span="5">
         <is-menu></is-menu>
       </el-col>
-      <el-col :span="18" class="min-hgt">
+      <el-col :span="15" class="min-hgt">
         <el-card class="box-card">
         <router-view></router-view>
         </el-card>

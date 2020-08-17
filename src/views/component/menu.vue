@@ -17,6 +17,14 @@ export default {
           name: "table",
           link: "table",
         },
+         {
+          name: "对话框",
+          link: "model",
+        },
+         {
+          name: "Demo",
+          link: "demo",
+        },
       ],
     };
   },
