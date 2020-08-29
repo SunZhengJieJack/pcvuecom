@@ -33,6 +33,14 @@ const routes = [
         },
         component: () => import('@/views/demo'),
       },
+      {
+        path: 'vmedol',
+        name: 'vmedol',
+        meta: {
+          title:'自定义medol'
+        },
+        component: () => import('@/views/demo/v-model/v-model.vue'),
+      },
     ]
   },
 ]

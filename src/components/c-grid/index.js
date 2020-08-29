@@ -66,30 +66,12 @@ export default {
           minWidth={minWidth}
           fixed={fixed}
           align={align}>
-          {/* {...{
-            scopedSlots: {
-              default: ({ row, column, $index }) => {
-                return this.$_renderButtons(
-                  h,
-                  actions,
-                  {
-                    type: 'text'
-                  },
-                  buttonScope,
-                  [row, column, $index],
-                  // 插槽的参数
-                  {
-                    row,
-                    column,
-                    $index
-                  }
-                )
-              }
-            },
+          {...{
+              
             on: {
               ...events
             }
-          }} */}
+          }}
         </TableColumn>
       )
     },

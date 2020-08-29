@@ -25,6 +25,10 @@ export default {
           name: "Demo",
           link: "demo",
         },
+        {
+          name: "自定义v-models",
+          link: "vmedol",
+        },
       ],
     };
   },
