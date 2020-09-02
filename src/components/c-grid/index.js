@@ -66,12 +66,12 @@ export default {
           minWidth={minWidth}
           fixed={fixed}
           align={align}>
-          {...{
+          {/* {...{
               
             on: {
               ...events
             }
-          }}
+          }} */}
         </TableColumn>
       )
     },

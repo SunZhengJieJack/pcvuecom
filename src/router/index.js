@@ -41,11 +41,43 @@ const routes = [
         },
         component: () => import('@/views/demo/v-model/v-model.vue'),
       },
+      {
+        path: 'slot-demo',
+        name: 'slot-demo',
+        meta: {
+          title:'插槽demo'
+        },
+        component: () => import('@/views/slot-demo/slot-demo.vue'),
+      },
+      {
+        path: 'js-demo',
+        name: 'js-demo',
+        meta: {
+          title:'jsdemo'
+        },
+        component: () => import('@/views/js-demo/index.vue'),
+      },
+      {
+        path: 'watch-demo',
+        name: 'watch-demo',
+        meta: {
+          title:'watch-demo'
+        },
+        component: () => import('@/views/watch-demo/watch-demo.vue'),
+      },
+      {
+        path: 'vuex-demo',
+        name: 'vuex-demo',
+        meta: {
+          title:'vuex-demo'
+        },
+        component: () => import('@/views/vuex-demo.vue'),
+      },
     ]
   },
 ]
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes
 })

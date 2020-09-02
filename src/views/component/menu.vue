@@ -29,11 +29,28 @@ export default {
           name: "自定义v-models",
           link: "vmedol",
         },
+         {
+          name: "插槽demo",
+          link: "slot-demo",
+        },
+         {
+          name: "jsdemo",
+          link: "js-demo",
+        },
+         {
+          name: "watch-demo",
+          link: "watch-demo",
+        },
+         {
+          name: "vuex-demo",
+          link: "vuex-demo",
+        },
       ],
     };
   },
   methods:{
     goto(row){
+      if(row.link==this.$route.name) return
       this.$router.push({
         name:row.link
       })
