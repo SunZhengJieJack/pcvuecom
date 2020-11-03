@@ -67,7 +67,7 @@ export default {
             state: false,
           },
           {
-            name: "韩孝周",
+            name: "韩孝周",
             age: "23",
             gender: "1",
             state: false,
@@ -94,7 +94,7 @@ export default {
           state: false,
         },
         {
-          name: "韩孝周",
+          name: "韩孝周",
           age: "23",
           gender: "1",
           state: false,

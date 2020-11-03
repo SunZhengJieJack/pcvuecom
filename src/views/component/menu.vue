@@ -45,6 +45,10 @@ export default {
           name: "vuex-demo",
           link: "vuex-demo",
         },
+        {
+          name: "notify",
+          link: "notify",
+        },
       ],
     };
   },
