@@ -13,10 +13,6 @@ export default {
     }
   },
   method:{
-    open(){
-      this.visible= true
-      this.message='调用open'
-    }
   }
 }
 </script>

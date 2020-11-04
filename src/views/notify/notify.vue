@@ -1,6 +1,7 @@
 <template>
   <div class="notifynotify">
-    <span @click="open">btn</span>
+    <span @click="()=>{this.$toast.onShow('onShow',3000)}">btn</span>
+    <span @click="()=>{this.$toast.onHide('onHide',1000)}">btn</span>
   </div>
 </template>
 <script>
@@ -8,14 +9,14 @@ export default {
   name: "notify",
   components: {},
   data() {
-    return {};
+    return {}
   },
   methods: {
     open() {
-      this.$toast('测试',3000)
+      
     },
   },
   mounted() {
-  },
+  }
 };
 </script>
