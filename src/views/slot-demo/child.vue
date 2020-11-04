@@ -8,6 +8,8 @@
                 {{item}}
             <slot name="btn"></slot>
         </div>
+        -------------------------------
+        <slot name="demo2" :childslotval="[child,child2]"></slot>
     </div>
 </template>
 <script lang="ts">
@@ -16,7 +18,8 @@ export default {
     props:['arr'],
     data(){
         return{
-
+          child:'slot-scopechildval',
+          child2:'slot-scopechildval2',
         }
     },
     created(){
