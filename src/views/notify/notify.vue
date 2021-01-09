@@ -1,7 +1,8 @@
 <template>
   <div class="notifynotify">
-    <span @click="()=>{this.$toast.onShow('onShow',3000)}">btn</span>
-    <span @click="()=>{this.$toast.onHide('onHide',1000)}">btn</span>
+    <span @click="()=>{this.$toast.onShow('onShow',3000)}">show</span><br>
+    <span @click="()=>{this.$toast.onHide('onHide',1000)}">hide</span><br>
+    <span @click="()=>{this.$toast.onHide('init',1000)}">init</span>
   </div>
 </template>
 <script>
