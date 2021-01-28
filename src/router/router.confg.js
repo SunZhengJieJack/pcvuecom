@@ -112,5 +112,14 @@ export const routes = [{
     component: () =>
       import('@/views/promisedemo/index'),
   },
+  {
+    path: "medelprops",
+    name: 'medelprops',
+    meta: {
+      title: 'model子父传值'
+    },
+    component: () =>
+      import('@/views/medelprops/index'),
+  },
   ]
 },]
