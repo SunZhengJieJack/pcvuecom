@@ -27,7 +27,7 @@ export default {
     return {};
   },
   mounted() {
-    var swiper = new Swiper(".mySwiper", {
+    var mySwiper = new Swiper(".mySwiper", {
       autoplay: true,
       loop: true,
       pagination: {
@@ -39,7 +39,12 @@ export default {
         prevEl: ".swiper-button-prev",
       },
     });
-    this.$refs.mySwiper.$swiper.$wrapperEl[0].style["transition-timing-function"] = "linear";
+    mySwiper.el.onmouseover = function () {
+      mySwiper.autoplay.stop();
+    };
+    mySwiper.el.onmouseout = function () {
+      mySwiper.autoplay.start();
+    };
   },
 };
 </script>
