@@ -1,113 +1,93 @@
+
 <template>
-  <div class="table">
-    <c-grid :data="config" :value="isval"></c-grid>
+  <div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
 </template>
 <script>
-import cGrid from "@/components/c-grid";
 export default {
   name: "istable",
-  components: {
-    cGrid,
-  },
+  components: {},
   data() {
-    let self = this;
-    let table = {
-      query: {},
-      columns: [
-        {
-          name: "name",
-          label: "名字",
-          width:'100'
-        },
-        {
-          name: "age",
-          label: "年纪",
-        },
-        {
-          name: "gender",
-          label: "性别",
-          formatter(row, column, cellValue) {
-            return cellValue === 0 ? '男' : '女'
-          }
-        },
-        {
-          name: "aa",
-          label: "操作",
-          render: function (h, param) {
-            let buttons = [];
-            // buttons.push(
-            //   h(
-            //     "Button",
-            //     {
-            //       props: {
-            //         type: "error",
-            //         size: "small",
-            //       },
-            //       style: {
-            //         margin: "0 5px",
-            //       },
-            //       on: {
-            //         click: function () {},
-            //       },
-            //     },
-            //     "删除"
-            //   )
-            // );
-            return h("div", {}, buttons);
-          },
-        },
-      ],
-      onloadData(url, param, callback) {
-        var arr = [
-          {
-            name: "小明",
-            age: "20",
-            gender: "0",
-            state: false,
-          },
-          {
-            name: "韩孝周",
-            age: "23",
-            gender: "1",
-            state: false,
-          },
-          {
-            name: "海绵宝宝",
-            age: "11",
-            gender: "0",
-            state: true,
-          },
-        ];
-        callback(arr, {
-          total: 200,
-        });
-      },
-    };
-    return {
-      config: table,
-      isval: [
-        {
-          name: "小明",
-          age: "20",
-          gender: "0",
-          state: false,
-        },
-        {
-          name: "韩孝周",
-          age: "23",
-          gender: "1",
-          state: false,
-        },
-        {
-          name: "海绵宝宝",
-          age: "11",
-          gender: "0",
-          state: true,
-        },
-      ],
-    };
+    return {};
   },
-  mounted() {},
+  mounted() {
+    var swiper = new Swiper(".mySwiper", {
+      autoplay: true,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    this.$refs.mySwiper.$swiper.$wrapperEl[0].style["transition-timing-function"] = "linear";
+  },
 };
 </script>
+    <style>
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 240px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
